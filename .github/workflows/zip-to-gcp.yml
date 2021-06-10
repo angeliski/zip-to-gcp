@@ -20,5 +20,11 @@ jobs:
     - name: Archive Release
       uses: thedoctor0/zip-release@master
       with:
-        filename: 'release.zip'
+        filename: 'challenge.zip'
         exclusions: '*.git* /*node_modules/* .editorconfig'
+    - id: upload-file
+      uses: google-github-actions/upload-cloud-storage@main
+      with:
+        credentials: ${{ secrets.gcp_credentials }}
+        path: 'challenge.zip'
+        destination: dev-challenge/challenge
