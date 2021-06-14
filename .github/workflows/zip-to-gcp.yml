@@ -22,9 +22,12 @@ jobs:
       with:
         filename: 'challenge.zip'
         exclusions: '*.git* /*node_modules/* .editorconfig'
-    - id: upload-file
-      uses: google-github-actions/upload-cloud-storage@main
+    - id: commit-challenge
+      name: Commit challenge
+      uses: EndBug/add-and-commit@v7
       with:
-        credentials: ${{ secrets.gcp_credentials }}
-        path: 'challenge.zip'
-        destination: dev-challenge
+        branch: gh-pages
+        author_name: Rogerio Angeliski
+        author_email: angeliski@hotmail.com
+        message: 'updated challenge from main'
+        add: 'challenge.zip'
