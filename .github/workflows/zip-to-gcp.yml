@@ -27,7 +27,5 @@ jobs:
       uses: EndBug/add-and-commit@v7
       with:
         branch: gh-pages
-        author_name: Rogerio Angeliski
-        author_email: angeliski@hotmail.com
         message: 'updated challenge from main'
-        add: '*.zip'
+        add: 'challenge.zip'
