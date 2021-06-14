@@ -30,4 +30,4 @@ jobs:
         author_name: Rogerio Angeliski
         author_email: angeliski@hotmail.com
         message: 'updated challenge from main'
-        add: 'challenge.zip'
+        add: '*.zip'
