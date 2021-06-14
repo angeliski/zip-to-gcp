@@ -21,11 +21,10 @@ jobs:
       uses: thedoctor0/zip-release@master
       with:
         filename: 'challenge.zip'
-        exclusions: '*.git* /*node_modules/* .editorconfig'
+        exclusions: '*.git* /*node_modules/* .editorconfig *.zip'
     - id: commit-challenge
       name: Commit challenge
       uses: EndBug/add-and-commit@v7
       with:
-        branch: gh-pages
         message: 'updated challenge from main'
         add: 'challenge.zip'
